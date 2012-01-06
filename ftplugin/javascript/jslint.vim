@@ -193,15 +193,15 @@ function! s:JSLint()
     endif
   endfor
 
-  if exists("s:jslint_qf")
-    " if jslint quickfix window is already created, reuse it
-    call s:ActivateJSLintQuickFixWindow()
-    call setqflist(b:qf_list, 'r')
-  else
-    " one jslint quickfix window for all buffers
-    call setqflist(b:qf_list, '')
-    let s:jslint_qf = s:GetQuickFixStackCount()
-  endif
+  "if exists("s:jslint_qf")
+    "" if jslint quickfix window is already created, reuse it
+    "call s:ActivateJSLintQuickFixWindow()
+    "call setqflist(b:qf_list, 'r')
+  "else
+    "" one jslint quickfix window for all buffers
+    "call setqflist(b:qf_list, '')
+    "let s:jslint_qf = s:GetQuickFixStackCount()
+  "endif
   let b:cleared = 0
 endfunction
 
